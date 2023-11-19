@@ -36,6 +36,12 @@
     transition-property: background, scale;
     transition-timing-function: cubic-bezier(0.88,-0.42, 0, 1.08);
     transition-delay: .5s;
+    opacity: 0;
+}
+
+section:hover .pulser{
+    opacity: 1;
+
 }
 
 .pulser:hover {
@@ -43,4 +49,3 @@
     background-color: blue;
     box-shadow: 0 0 10px blue;
 }
-
