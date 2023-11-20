@@ -38,10 +38,20 @@
     transition-delay: .5s;
 }
 
+/* Para reducir las transiciones para aquellos usuarios que no la desean */
+
+@media (prefers-reduced-motion: reduce) {
+  .pulser {
+    transition: none;
+  }
+}
+
 .pulser:hover {
     scale: 2;
     background-color: blue;
     box-shadow: 0 0 10px blue;
     transition-duration: .5s; /* La primera animación */ 
 }
+
+
 
