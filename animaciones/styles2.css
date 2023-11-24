@@ -49,8 +49,9 @@
 
     animation: pulse;
     animation-duration: 2s;
+    animation-delay: 2s;
     animation-duration: ease-in-out;
-    animation-iteration-count: 5;
+    animation-iteration-count: 3; /* Si queremos que la haga infinitas veces, solo debemos añadir infinite. Para un nº determinado de veces, poner 1, o 2, o 3, o 4, o 5 */
 }
 
 @keyframes pulse {
