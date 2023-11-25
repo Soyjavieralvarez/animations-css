@@ -1,10 +1,16 @@
 img {
     width: 80px;
-    animation: move;
-    animation-duration: 2s;
-    animation-iteration-count: infinite; /* Para que solo haga la animación de delante hacia atrás, debemos añadirle el valor 2 */
-    animation-timing-function: linear;
-    animation-direction: alternate;  /* reverse: Por si queremos que la animación sea al contrario. Alternate: para que vaya de delante hacia atrás */
+    margin: 200px;
+    /* animation-name: move;
+    animation-duration: 2s; */
+    /* animation-iteration-count: infinite; Para que solo haga la animación de delante hacia atrás, debemos añadirle el valor 2 */
+    /* animation-timing-function: linear; */
+    /* animation-direction: alternate;  /* reverse: Por si queremos que la animación sea al contrario. Alternate: para que vaya de delante hacia atrás */
+   /* animation-fill-mode: both; /* Forwards: Para que la animación se quede en su estado final */
+
+    animation: 
+    move 2s steps(10) both, /* Todas las líneas de arriba se pueden resumir en una sola línea de código */
+    magnify 1s linear 2s both;
 
     &:hover {
         animation-play-state: paused;
@@ -31,5 +37,24 @@ img {
     to {
         transform: translateX(200px);
     }
+    
+}
+
+@keyframes magnify {
+    0% {
+       scale: 1;
+    }
+
+    25% {
+       scale: 1.4;
+    }
+
+    75% {
+        scale: 1.8;
+     }
+
+     100% {
+        scale: 2.2;
+     }
     
 }
