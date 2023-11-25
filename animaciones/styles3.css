@@ -5,7 +5,23 @@ img {
     animation-iteration-count: infinite; /* Para que solo haga la animación de delante hacia atrás, debemos añadirle el valor 2 */
     animation-timing-function: linear;
     animation-direction: alternate;  /* reverse: Por si queremos que la animación sea al contrario. Alternate: para que vaya de delante hacia atrás */
+
+    &:hover {
+        animation-play-state: paused;
+        opacity: .7;
+        filter: contrast(150%);
+        cursor: progress;
+    }
 }
+
+/* Método para pausar la animación */
+
+/* img:hover {
+    animation-play-state: paused;
+    opacity: .7;
+    filter: contrast(150%);
+    cursor: progress;
+} */
 
 @keyframes move {
     from {
